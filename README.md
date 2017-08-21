@@ -3,8 +3,7 @@
 ###### Envio de SMS
 
 
-```
-
+```java
 MovileConfiguration movileConf = new MovileConfiguration("USER_NAME", "AUTH_TOKEN");
 
 try {
