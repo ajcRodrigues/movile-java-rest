@@ -3,6 +3,7 @@ package com.movile.movile_java_rest.service;
 import java.io.IOException;
 
 import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.slf4j.Logger;
@@ -26,7 +27,7 @@ public class SenderService {
 	public String send(Message message) throws IOException {
 		LOG.info("Movile-Java Rest: Message {}", message);
 		Response response = this.movile.getNewClient().target(SEND_SMS_API).request()
-				.post(Entity.entity(message, "application/json; charset=UTF-8"));
+				.post(Entity.entity(message, MediaType.APPLICATION_JSON_TYPE.withCharset("UTF-8")));
 
 		int responseStatus = response.getStatus();
 		String responseText = null;

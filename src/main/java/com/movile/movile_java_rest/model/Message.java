@@ -33,4 +33,9 @@ public class Message implements Serializable {
 	public void setMessageText(String messageText) {
 		this.messageText = messageText;
 	}
+
+	@Override
+	public String toString() {
+		return "Message: {'destination':'" + destination + "', 'messageText':'" + messageText + "'}";
+	}
 }
