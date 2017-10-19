@@ -17,3 +17,9 @@ catch (IException e) {
 	e.printStackTrace();
 }
 ```
+
+
+## Author
+
+[Antônio José da Cunha Rodrigues](https://github.com/ajcRodrigues).
+
